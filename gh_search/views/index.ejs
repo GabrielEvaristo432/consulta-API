@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Consulta Git Hub</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Olá, <%= dados.login %></h1>
+    <h2>Sua consulta retorou os seguintes resultados:</h2>
+    <p>- Nome: <%= dados.name %></p>
+    <p>- Foto de perfil:</p>
+    <img src="<%= dados.avatar_url %>" width="300px" height="300px">
+    <p>- Seguindo:</p>
+    <ul>
+      <% foll.forEach((f) => { %>
+        <li><%= f.login %></li>
+      <% }) %>
+    </ul>
+  </body>
+</html>
